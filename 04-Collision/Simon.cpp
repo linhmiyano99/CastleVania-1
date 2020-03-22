@@ -30,7 +30,7 @@ CSimon::CSimon() :CGameObject()
 		AddAnimation(1003);//attack right
 		AddAnimation(2003);//attack left
 		untouchable = 0;
-		//weapons[0] = CWhip2::GetInstance();
+		weapons[eType::Whip] = CWhip2::GetInstance();
 }
 void CSimon::Update(DWORD dt, vector<LPGAMEOBJECT> *coObjects)
 {
@@ -142,9 +142,9 @@ void CSimon::Render()
 				else ani = SIMON_ANI_ATTACK_LEFT;
 				//if(state==SIMON_STATE_ATTACK)
 				// CWhip2::GetInstance()->Render();
-				 //CWhip2 *w = CWhip2::GetInstance();
-				CWhip2::GetInstance()->Render();
-
+				// CWhip2 *w = CWhip2::GetInstance();
+				//w->Render();
+				weapons[eType::Whip]->Render();
 
 				//CWhip::GetInstance()->Render();
 				//Whip->

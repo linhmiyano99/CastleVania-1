@@ -49,7 +49,7 @@ class CSimon : public CGameObject
 	bool isAttack;
 	DWORD untouchable_start;
 	static CSimon* __instance;
-	//unordered_map<int, CWeapon*> weapons;
+	unordered_map<int, CWeapon*> weapons;
 public: 
 	CSimon();
 	static CSimon* GetInstance();
